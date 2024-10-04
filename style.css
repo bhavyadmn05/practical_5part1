@@ -1,0 +1,88 @@
+/* TODO(you): Write the CSS to finish the assignment! */
+/* General grid for choices */
+body{
+    background-color:#96eefb;
+}
+.choice-grid {
+    display: flex;
+    flex-wrap: wrap;
+    width: 100%;
+    justify-content: space-between;
+}
+
+/* Styling individual grid items */
+.choice-grid div {
+    width: 32.5%;
+    margin: 10px 5px;
+    background-color: #f9f9f9; /* Soft off-white */
+    border: 1px solid #ccc;
+    padding: 15px;
+    box-sizing: border-box;
+    border-radius: 8px;
+    transition: background-color 0.3s, transform 0.2s ease-in-out;
+    cursor: pointer;
+}
+
+.choice-grid div:hover {
+    background-color: #ffe0b2; /* Light peach on hover */
+    transform: translateY(-5px);
+}
+
+/* Ensuring images are fully responsive */
+.choice-grid div img {
+    width: 100%;
+    border-radius: 5px;
+}
+
+/* Checkbox styling */
+.checkbox {
+    height: 20px;
+    width: 20px;
+    margin-top: 5px;
+}
+
+/* Result section styling */
+.result {
+    margin: 40px 0 20px;
+    padding: 20px;
+    display: none;
+    background-color: #f0f4c3; /* Light lime */
+    border-radius: 10px;
+    border: 1px solid #dce775;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Restart button styling */
+#restart-quiz {
+    width: 100%;
+    height: 50px;
+    background-color: #4db6ac; /* Muted teal */
+    color: white;
+    font-size: 16px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+#restart-quiz:hover {
+    background-color: #00897b; /* Darker teal on hover */
+}
+
+/* Responsiveness for medium-sized devices */
+@media (max-width: 700px) {
+    article {
+        width: 95%;
+    }
+
+    header div span {
+        display: none;
+    }
+}
+
+/* Adjustments for smaller devices */
+@media (max-width: 500px) {
+    .choice-grid div {
+        width: 48%;
+    }
+}
